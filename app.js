@@ -78,6 +78,7 @@
     var ll = document.getElementById("langLabel");
     if (ll) ll.textContent = lang === "es" ? "EN" : "ES";
     bindWhatsApp();
+    renderPricing();
   }
   function toggleLang() {
     lang = lang === "es" ? "en" : "es";
@@ -286,6 +287,90 @@
     });
   }
 
+  /* ---------- Pricing ---------- */
+  var PLANS = [
+    { id: "free", monthly: 0, annual: 0, popular: false,
+      name: { es: "Gratis", en: "Free" },
+      desc: { es: "Diagnóstico esencial para empezar.", en: "Essential diagnostic to get started." },
+      cta: { es: "Comenzar gratis", en: "Get started free" },
+      features: {
+        es: ["1 diagnóstico de IA al mes", "Business Health Score básico", "Soporte de la comunidad"],
+        en: ["1 AI diagnostic per month", "Basic Business Health Score", "Community support"]
+      } },
+    { id: "pro", monthly: 49, annual: 40, popular: true,
+      name: { es: "Profesional", en: "Professional" },
+      desc: { es: "Insights avanzados para equipos en crecimiento.", en: "Advanced insights for growing teams." },
+      cta: { es: "Probar 14 días", en: "14-day trial" },
+      features: {
+        es: ["Diagnósticos ilimitados", "Health Score completo", "Análisis predictivo", "Soporte prioritario"],
+        en: ["Unlimited diagnostics", "Full Health Score", "Predictive analytics", "Priority support"]
+      } },
+    { id: "business", monthly: 129, annual: 107, popular: false,
+      name: { es: "Negocios", en: "Business" },
+      desc: { es: "Planeación estratégica y modelado predictivo.", en: "Strategic planning and predictive modeling." },
+      cta: { es: "Probar 14 días", en: "14-day trial" },
+      features: {
+        es: ["Todo lo de Profesional", "Asesor IA dedicado", "Benchmarking de industria", "Soporte 24/7"],
+        en: ["Everything in Professional", "Dedicated AI advisor", "Industry benchmarking", "24/7 support"]
+      } },
+    { id: "enterprise", monthly: 299, annual: 248, popular: false,
+      name: { es: "Empresarial", en: "Enterprise" },
+      desc: { es: "Soluciones a medida e IA privada.", en: "Tailored solutions and private AI." },
+      cta: { es: "Contactar ventas", en: "Contact sales" },
+      features: {
+        es: ["Todo lo de Negocios", "Algoritmos personalizados", "Integraciones a medida", "Asesores dedicados"],
+        en: ["Everything in Business", "Custom algorithms", "Custom integrations", "Dedicated advisors"]
+      } }
+  ];
+  var billingAnnual = false;
+  function money(n) { return "$" + n; }
+  function renderPricing() {
+    var grid = document.getElementById("pricingGrid");
+    if (!grid) return;
+    var checkSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+    grid.innerHTML = PLANS.map(function (p) {
+      var price = billingAnnual ? p.annual : p.monthly;
+      var billed = "";
+      if (billingAnnual && p.annual > 0) {
+        billed = '<div class="plan-billed">' + t("pricing.billedAnnually").replace("%s", money(p.annual * 12)) + "</div>";
+      }
+      var feats = p.features[lang].map(function (f) {
+        return '<li>' + checkSvg + '<span>' + f + "</span></li>";
+      }).join("");
+      return '<div class="plan-card' + (p.popular ? " popular" : "") + '">' +
+        (p.popular ? '<div class="plan-badge">' + t("pricing.popular") + "</div>" : "") +
+        '<div class="plan-name">' + p.name[lang] + "</div>" +
+        '<div class="plan-desc">' + p.desc[lang] + "</div>" +
+        '<div class="plan-price"><span class="plan-amount">' + money(price) + '</span><span class="plan-per">' + t("pricing.mo") + "</span></div>" +
+        billed +
+        '<ul class="plan-features">' + feats + "</ul>" +
+        '<button class="btn ' + (p.popular ? "btn-accent" : "btn-ghost") + ' plan-cta" data-plan="' + p.name[lang] + '">' + p.cta[lang] + "</button>" +
+        "</div>";
+    }).join("");
+    grid.querySelectorAll(".plan-cta").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var plan = b.getAttribute("data-plan");
+        var msg = lang === "es"
+          ? "Hola " + (CFG.brand || "") + ", me interesa el plan " + plan + " de Nexora."
+          : "Hi " + (CFG.brand || "") + ", I'm interested in the " + plan + " plan of Nexora.";
+        window.open(waLink(msg), "_blank", "noopener");
+      });
+    });
+  }
+  function initPricing() {
+    var sw = document.getElementById("billingSwitch");
+    if (!sw) return;
+    sw.addEventListener("click", function () {
+      billingAnnual = !billingAnnual;
+      sw.classList.toggle("on", billingAnnual);
+      sw.setAttribute("aria-checked", billingAnnual ? "true" : "false");
+      document.getElementById("btMonthly").classList.toggle("active", !billingAnnual);
+      document.getElementById("btAnnual").classList.toggle("active", billingAnnual);
+      renderPricing();
+    });
+    renderPricing();
+  }
+
   /* ---------- Init ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     applyConfig();
@@ -293,6 +378,7 @@
     document.getElementById("langToggle").addEventListener("click", toggleLang);
     initHeader();
     initReveal();
+    initPricing();
     initQuote();
     initContactForm();
   });

@@ -19,9 +19,9 @@
       <span class="logo">N</span><span>Nexora</span>
     </a>
     <nav class="nav-links">
-      <a href="#services" data-i18n="nav.services">Servicios</a>
-      <a href="#why" data-i18n="nav.why">Por qué Nexora</a>
-      <a href="#process" data-i18n="nav.process">Proceso</a>
+      <a href="#services" data-i18n="nav.services">Producto</a>
+      <a href="#process" data-i18n="nav.process">Cómo funciona</a>
+      <a href="#pricing" data-i18n="nav.pricing">Precios</a>
       <a href="#industries" data-i18n="nav.industries">Industrias</a>
       <a href="#contact" data-i18n="nav.contact">Contacto</a>
     </nav>
@@ -30,7 +30,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span id="langLabel">EN</span>
       </button>
-      <a href="#quote" class="btn btn-primary btn-desktop" style="height:44px;padding:0 18px;font-size:15px" data-i18n="nav.quote">Pedir cotización</a>
+      <a href="#quote" class="btn btn-primary btn-desktop" style="height:44px;padding:0 18px;font-size:15px" data-i18n="nav.quote">Diagnóstico gratis</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menú">
         <svg id="menuIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         <svg id="menuIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -38,12 +38,12 @@
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#services" data-i18n="nav.services">Servicios</a>
-    <a href="#why" data-i18n="nav.why">Por qué Nexora</a>
-    <a href="#process" data-i18n="nav.process">Proceso</a>
+    <a href="#services" data-i18n="nav.services">Producto</a>
+    <a href="#process" data-i18n="nav.process">Cómo funciona</a>
+    <a href="#pricing" data-i18n="nav.pricing">Precios</a>
     <a href="#industries" data-i18n="nav.industries">Industrias</a>
     <a href="#contact" data-i18n="nav.contact">Contacto</a>
-    <a href="#quote" class="btn btn-primary" data-i18n="nav.quote">Pedir cotización</a>
+    <a href="#quote" class="btn btn-primary" data-i18n="nav.quote">Diagnóstico gratis</a>
   </div>
 </header>
 
@@ -190,6 +190,24 @@
   </div>
 </section>
 
+<!-- ================= PRICING ================= -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="pricing.eyebrow">Precios</span>
+      <h2 data-i18n="pricing.title">Precios simples y transparentes</h2>
+      <p data-i18n="pricing.subtitle">Elige el plan ideal para tu negocio.</p>
+    </div>
+    <div class="billing-toggle reveal">
+      <span class="bt-label active" id="btMonthly" data-i18n="pricing.monthly">Mensual</span>
+      <button class="bt-switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Mensual / Anual"><span class="bt-knob"></span></button>
+      <span class="bt-label" id="btAnnual" data-i18n="pricing.annual">Anual</span>
+      <span class="bt-save" data-i18n="pricing.save">Ahorra 17%</span>
+    </div>
+    <div class="pricing-grid reveal" id="pricingGrid"></div>
+  </div>
+</section>
+
 <!-- ================= QUOTE BUILDER ================= -->
 <section class="section quote" id="quote">
   <div class="blob blob-1"></div>
@@ -211,12 +229,12 @@
         <div class="qlabel" data-i18n="quote.s1label">¿Qué necesitas?</div>
         <div class="qhint" data-i18n="quote.s1hint">Selecciona uno o varios servicios.</div>
         <div class="qopts" data-multi>
-          <button class="qopt" data-val="svc1.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc1.t">Software a la medida</span></button>
-          <button class="qopt" data-val="svc2.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc2.t">Aplicaciones web</span></button>
-          <button class="qopt" data-val="svc3.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc3.t">Apps móviles</span></button>
-          <button class="qopt" data-val="svc4.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc4.t">Inteligencia artificial</span></button>
-          <button class="qopt" data-val="svc5.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc5.t">Cloud & DevOps</span></button>
-          <button class="qopt" data-val="svc6.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc6.t">Datos & Analítica</span></button>
+          <button class="qopt" data-val="area1"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area1">Reducir costos</span></button>
+          <button class="qopt" data-val="area2"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area2">Aumentar ingresos</span></button>
+          <button class="qopt" data-val="area3"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area3">Mitigar riesgos</span></button>
+          <button class="qopt" data-val="area4"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area4">Automatizar con IA</span></button>
+          <button class="qopt" data-val="area5"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area5">Comparar con la industria</span></button>
+          <button class="qopt" data-val="area6"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area6">No estoy seguro</span></button>
         </div>
         <div class="qnav"><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
       </div>

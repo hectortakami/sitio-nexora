@@ -316,6 +316,39 @@ textarea.qinput { height: auto; padding: 14px 16px; resize: vertical; min-height
 .qdone h3 { color: #fff; font-size: 25px; margin-bottom: 10px; }
 .qdone p { color: rgb(255 255 255 / .68); margin-bottom: 26px; }
 
+/* ---------- Pricing ---------- */
+.billing-toggle { display: flex; align-items: center; justify-content: center; gap: 14px; margin: -24px auto 48px; }
+.bt-label { font-weight: 700; font-size: 16px; color: hsl(var(--muted-foreground)); transition: color .2s; }
+.bt-label.active { color: hsl(var(--foreground)); }
+.bt-switch { width: 54px; height: 30px; border-radius: 99px; background: hsl(var(--border)); position: relative; transition: background .25s; flex-shrink: 0; }
+.bt-switch.on { background: hsl(var(--accent)); }
+.bt-knob { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: var(--shadow-sm); transition: transform .25s cubic-bezier(.16,1,.3,1); }
+.bt-switch.on .bt-knob { transform: translateX(24px); }
+.bt-save { font-size: 12.5px; font-weight: 700; color: rgb(var(--c-green)); background: rgb(var(--c-green) / .12); padding: 5px 11px; border-radius: 99px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+.plan-card {
+  position: relative; display: flex; flex-direction: column;
+  border-radius: var(--radius); padding: 30px 26px; background: hsl(var(--card));
+  border: 1px solid hsl(var(--border)); box-shadow: var(--shadow-sm); transition: transform .3s, box-shadow .3s;
+}
+.plan-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.plan-card.popular { border-color: hsl(var(--accent)); box-shadow: 0 18px 40px -14px hsl(var(--accent) / .35); }
+.plan-badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: hsl(var(--accent)); color: #fff; font-size: 12.5px; font-weight: 700;
+  padding: 5px 14px; border-radius: 99px; white-space: nowrap; box-shadow: var(--shadow-sm);
+}
+.plan-name { font-size: 21px; font-weight: 800; margin-bottom: 6px; }
+.plan-desc { font-size: 14px; color: hsl(var(--muted-foreground)); margin-bottom: 20px; min-height: 40px; }
+.plan-price { display: flex; align-items: baseline; gap: 4px; }
+.plan-amount { font-size: 42px; font-weight: 800; letter-spacing: -.03em; }
+.plan-per { font-size: 15px; color: hsl(var(--muted-foreground)); font-weight: 600; }
+.plan-billed { font-size: 13px; color: rgb(var(--c-green)); font-weight: 600; margin-top: 4px; min-height: 18px; }
+.plan-features { display: grid; gap: 12px; margin: 22px 0 26px; padding-top: 22px; border-top: 1px solid hsl(var(--border)); }
+.plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: hsl(var(--foreground)); }
+.plan-features li svg { width: 17px; height: 17px; color: rgb(var(--c-green)); flex-shrink: 0; margin-top: 2px; }
+.plan-cta { width: 100%; margin-top: auto; }
+
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
 .contact-info h2 { font-size: clamp(28px, 3.6vw, 42px); margin: 14px 0 16px; }
@@ -406,6 +439,7 @@ html[lang="es"] li[data-lang-es], html[lang="en"] li[data-lang-en] { display: fl
 @media (max-width: 980px) {
   .services-grid, .ind-grid { grid-template-columns: repeat(2, 1fr); }
   .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .process-line { display: none; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -418,7 +452,7 @@ html[lang="es"] li[data-lang-es], html[lang="en"] li[data-lang-en] { display: fl
   .section { padding: 70px 0; }
   .hero { padding: 92px 0 80px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; margin-top: 50px; }
-  .services-grid, .ind-grid, .impact-grid { grid-template-columns: 1fr; }
+  .services-grid, .ind-grid, .impact-grid, .pricing-grid { grid-template-columns: 1fr; }
   .qopts { grid-template-columns: 1fr; }
   .cfield-row { grid-template-columns: 1fr; }
   .quote-card, .contact-form { padding: 26px 20px; }
