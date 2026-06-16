@@ -9,17 +9,17 @@ window.CONFIG = {
   // Número de WhatsApp en formato internacional, SOLO dígitos.
   // Ejemplo México: 52 + 10 dígitos  →  "5215512345678"
   // Ejemplo España: 34 + 9 dígitos   →  "34612345678"
-  whatsapp: "5215512345678",
+  whatsapp: "525554543046",
 
   // Cómo se muestra el número (puedes escribirlo bonito)
-  whatsappDisplay: "+52 1 55 1234 5678",
+  whatsappDisplay: "+52 55 5454 3046",
 
   // Correo de contacto
-  email: "contacto@nexora.com",
+  email: "hector_takami@gmail.com",
 
   // Teléfono visible
-  phone: "+52 55 1234 5678",
-  phoneDial: "+525512345678", // para el enlace de llamada (solo dígitos y +)
+  phone: "+52 55 5454 3046",
+  phoneDial: "+525554543046", // para el enlace de llamada (solo dígitos y +)
 
   // Ubicación visible
   location: "Ciudad de México, México",
