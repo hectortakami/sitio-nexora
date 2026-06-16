@@ -324,9 +324,10 @@ textarea.qinput { height: auto; padding: 14px 16px; resize: vertical; min-height
 .contact-method { display: flex; align-items: center; gap: 16px; padding: 18px; border-radius: var(--radius); background: hsl(var(--card)); border: 1px solid hsl(var(--border)); box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s, border-color .2s; }
 .contact-method:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: hsl(var(--accent) / .4); }
 .contact-method .cm-ic { width: 50px; height: 50px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; }
+.contact-method > span:last-child { flex: 1; min-width: 0; }
 .contact-method .cm-ic svg { width: 24px; height: 24px; }
 .contact-method .cm-k { font-size: 13px; color: hsl(var(--muted-foreground)); font-weight: 600; display: block; margin-bottom: 3px; }
-.contact-method .cm-v { font-size: 16.5px; font-weight: 700; color: hsl(var(--foreground)); display: block; }
+.contact-method .cm-v { font-size: 16.5px; font-weight: 700; color: hsl(var(--foreground)); display: block; overflow-wrap: anywhere; }
 .contact-form { border-radius: 20px; padding: 36px; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); box-shadow: var(--shadow-md); }
 .contact-form h3 { font-size: 22px; margin-bottom: 6px; }
 .contact-form .sub { font-size: 15px; color: hsl(var(--muted-foreground)); margin-bottom: 24px; }
