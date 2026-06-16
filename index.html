@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora · Consultoría de Software</title>
+<meta name="description" content="Consultoría de software: desarrollo web, móvil, nube e inteligencia artificial a la medida de tu negocio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Nexora">
+      <span class="logo">N</span><span>Nexora</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services" data-i18n="nav.services">Servicios</a>
+      <a href="#why" data-i18n="nav.why">Por qué Nexora</a>
+      <a href="#process" data-i18n="nav.process">Proceso</a>
+      <a href="#industries" data-i18n="nav.industries">Industrias</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="langLabel">EN</span>
+      </button>
+      <a href="#quote" class="btn btn-primary btn-desktop" style="height:44px;padding:0 18px;font-size:15px" data-i18n="nav.quote">Pedir cotización</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menú">
+        <svg id="menuIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menuIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" data-i18n="nav.services">Servicios</a>
+    <a href="#why" data-i18n="nav.why">Por qué Nexora</a>
+    <a href="#process" data-i18n="nav.process">Proceso</a>
+    <a href="#industries" data-i18n="nav.industries">Industrias</a>
+    <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    <a href="#quote" class="btn btn-primary" data-i18n="nav.quote">Pedir cotización</a>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="grid-bg"></div>
+  <div class="wrap hero-inner">
+    <span class="badge reveal"><span class="dot"></span><span data-i18n="hero.badge">Consultoría de software</span></span>
+    <h1 class="reveal d1"><span data-i18n="hero.title1">Software a la medida que </span><span class="grad" data-i18n="hero.titleAccent">impulsa tu negocio</span></h1>
+    <p class="lead reveal d2" data-i18n="hero.lead">Diseñamos, desarrollamos e integramos soluciones digitales.</p>
+    <div class="hero-cta reveal d3">
+      <a href="#quote" class="btn btn-accent btn-lg">
+        <span data-i18n="hero.cta1">Pedir cotización</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#" class="btn btn-outline-light btn-lg" data-wa-cta>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        <span data-i18n="hero.cta2">Hablar por WhatsApp</span>
+      </a>
+    </div>
+    <div class="hero-stats reveal d4">
+      <div class="stat"><div class="num"><span class="counter" data-to="120" data-suffix="+">0</span></div><div class="lbl" data-i18n="hero.stat1">Proyectos entregados</div></div>
+      <div class="stat"><div class="num"><span class="counter" data-to="10" data-suffix="+">0</span></div><div class="lbl" data-i18n="hero.stat2">Años de experiencia</div></div>
+      <div class="stat"><div class="num"><span class="counter" data-to="98" data-suffix="%">0</span></div><div class="lbl" data-i18n="hero.stat3">Satisfacción de clientes</div></div>
+      <div class="stat"><div class="num"><span class="accent">24/7</span></div><div class="lbl" data-i18n="hero.stat4">Soporte y monitoreo</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="trust">
+  <div class="wrap trust-row">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust.1">Equipo senior dedicado</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust.2">Entregas en tiempo</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust.3">Código limpio</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="trust.4">Acompañamiento</span></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="services.eyebrow">Lo que hacemos</span>
+      <h2 data-i18n="services.title">Servicios de desarrollo de software</h2>
+      <p data-i18n="services.subtitle">Soluciones integrales, de la idea a producción.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="service-ic" style="background:rgb(var(--c-blue)/.12);color:rgb(var(--c-blue))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3 data-i18n="svc1.t">Software a la medida</h3>
+        <p data-i18n="svc1.d">Sistemas de gestión y plataformas internas.</p>
+        <div class="service-tags"><span>ERP</span><span>CRM</span><span>SaaS</span></div>
+      </article>
+      <article class="service-card reveal d1">
+        <div class="service-ic" style="background:rgb(var(--c-electric)/.12);color:rgb(var(--c-electric))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 data-i18n="svc2.t">Aplicaciones web</h3>
+        <p data-i18n="svc2.d">Portales, paneles y SaaS escalables.</p>
+        <div class="service-tags"><span>React</span><span>Node</span><span>Cloud</span></div>
+      </article>
+      <article class="service-card reveal d2">
+        <div class="service-ic" style="background:rgb(var(--c-green)/.12);color:rgb(var(--c-green))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+        <h3 data-i18n="svc3.t">Apps móviles</h3>
+        <p data-i18n="svc3.d">Aplicaciones iOS y Android.</p>
+        <div class="service-tags"><span>iOS</span><span>Android</span><span>Flutter</span></div>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-ic" style="background:rgb(var(--c-purple)/.12);color:rgb(var(--c-purple))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0 0 8v1a4 4 0 0 0 8 0v-1a4 4 0 0 0 0-8V6a4 4 0 0 0-4-4z"/><path d="M12 18v3M8 8h.01M16 8h.01"/></svg></div>
+        <h3 data-i18n="svc4.t">Inteligencia artificial</h3>
+        <p data-i18n="svc4.d">Automatización, chatbots y analítica.</p>
+        <div class="service-tags"><span>Chatbots</span><span>ML</span><span>Automatización</span></div>
+      </article>
+      <article class="service-card reveal d1">
+        <div class="service-ic" style="background:rgb(var(--c-cyan)/.12);color:rgb(var(--c-cyan))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <h3 data-i18n="svc5.t">Cloud & DevOps</h3>
+        <p data-i18n="svc5.d">Infraestructura, CI/CD y seguridad.</p>
+        <div class="service-tags"><span>AWS</span><span>Docker</span><span>CI/CD</span></div>
+      </article>
+      <article class="service-card reveal d2">
+        <div class="service-ic" style="background:rgb(var(--c-orange)/.12);color:rgb(var(--c-orange))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3 data-i18n="svc6.t">Datos & Analítica</h3>
+        <p data-i18n="svc6.d">Integración de datos y dashboards.</p>
+        <div class="service-tags"><span>BI</span><span>Dashboards</span><span>ETL</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY / IMPACT ================= -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="why.eyebrow">Por qué elegirnos</span>
+      <h2 data-i18n="why.title">Resultados medibles, no solo código</h2>
+      <p data-i18n="why.subtitle">Nos enfocamos en el impacto real.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card reveal"><div class="ic" style="background:hsl(var(--primary)/.1);color:hsl(var(--primary))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="metric" style="color:hsl(var(--primary))" data-i18n="imp1.m">+40%</div><h3 data-i18n="imp1.t">Eficiencia operativa</h3><p data-i18n="imp1.d">Automatizando tareas manuales.</p></div>
+      <div class="impact-card reveal d1"><div class="ic" style="background:rgb(var(--c-green)/.1);color:rgb(var(--c-green))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div><div class="metric" style="color:rgb(var(--c-green))" data-i18n="imp2.m">-30%</div><h3 data-i18n="imp2.t">Costos operativos</h3><p data-i18n="imp2.d">Optimizando procesos.</p></div>
+      <div class="impact-card reveal d2"><div class="ic" style="background:hsl(var(--accent)/.1);color:hsl(var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="metric" style="color:hsl(var(--accent))" data-i18n="imp3.m">2x</div><h3 data-i18n="imp3.t">Velocidad de entrega</h3><p data-i18n="imp3.d">Metodologías ágiles.</p></div>
+      <div class="impact-card reveal d3"><div class="ic" style="background:rgb(var(--c-purple)/.1);color:rgb(var(--c-purple))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="metric" style="color:rgb(var(--c-purple))" data-i18n="imp4.m">99.9%</div><h3 data-i18n="imp4.t">Disponibilidad</h3><p data-i18n="imp4.d">Sistemas monitoreados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="process.eyebrow">Cómo trabajamos</span>
+      <h2 data-i18n="process.title">Un proceso claro de principio a fin</h2>
+      <p data-i18n="process.subtitle">Transparencia en cada etapa.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal"><div class="process-line"></div><div class="step-num">1</div><h3 data-i18n="p1.t">Descubrimiento</h3><p data-i18n="p1.d">Entendemos tu negocio.</p></div>
+      <div class="process-step reveal d1"><div class="process-line"></div><div class="step-num">2</div><h3 data-i18n="p2.t">Diseño</h3><p data-i18n="p2.d">Arquitectura y UX/UI.</p></div>
+      <div class="process-step reveal d2"><div class="process-line"></div><div class="step-num">3</div><h3 data-i18n="p3.t">Desarrollo</h3><p data-i18n="p3.d">Ciclos cortos.</p></div>
+      <div class="process-step reveal d3"><div class="process-line"></div><div class="step-num">4</div><h3 data-i18n="p4.t">Lanzamiento</h3><p data-i18n="p4.d">Pruebas y despliegue.</p></div>
+      <div class="process-step reveal d4"><div class="process-line"></div><div class="step-num">5</div><h3 data-i18n="p5.t">Soporte</h3><p data-i18n="p5.d">Mantenimiento continuo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES ================= -->
+<section class="section why" id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="ind.eyebrow">A quién servimos</span>
+      <h2 data-i18n="ind.title">Experiencia por industria</h2>
+      <p data-i18n="ind.subtitle">Conocemos los retos de cada sector.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal"><div class="ic" style="background:rgb(var(--c-blue)/.12);color:rgb(var(--c-blue))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><path d="M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div><h3 data-i18n="ind1.t">Banca y finanzas</h3><p data-i18n="ind1.d">Plataformas seguras y cumplimiento.</p></div>
+      <div class="ind-card reveal d1"><div class="ic" style="background:rgb(var(--c-green)/.12);color:rgb(var(--c-green))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3 data-i18n="ind2.t">Retail y e-commerce</h3><p data-i18n="ind2.d">Tiendas e integraciones.</p></div>
+      <div class="ind-card reveal d2"><div class="ic" style="background:rgb(var(--c-electric)/.12);color:rgb(var(--c-electric))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V8l6-4 6 4M14 20V10l6-3v13"/></svg></div><h3 data-i18n="ind3.t">Manufactura</h3><p data-i18n="ind3.d">Trazabilidad y calidad.</p></div>
+      <div class="ind-card reveal"><div class="ic" style="background:rgb(var(--c-purple)/.12);color:rgb(var(--c-purple))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3 data-i18n="ind4.t">Salud</h3><p data-i18n="ind4.d">Sistemas clínicos y citas.</p></div>
+      <div class="ind-card reveal d1"><div class="ic" style="background:rgb(var(--c-cyan)/.12);color:rgb(var(--c-cyan))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 data-i18n="ind5.t">Logística</h3><p data-i18n="ind5.d">Rutas e inventarios.</p></div>
+      <div class="ind-card reveal d2"><div class="ic" style="background:rgb(var(--c-orange)/.12);color:rgb(var(--c-orange))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3 data-i18n="ind6.t">Servicios profesionales</h3><p data-i18n="ind6.d">Herramientas a la medida.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUOTE BUILDER ================= -->
+<section class="section quote" id="quote">
+  <div class="blob blob-1"></div>
+  <div class="wrap">
+    <div class="quote-card reveal">
+      <div class="qhead">
+        <h2 data-i18n="quote.title">Arma tu cotización en 1 minuto</h2>
+        <p data-i18n="quote.subtitle">Cuéntanos qué necesitas.</p>
+      </div>
+      <div class="qprogress" id="qprogress">
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+        <div class="seg"><div class="fill"></div></div>
+      </div>
+
+      <!-- Step 1: services -->
+      <div class="qstep active" data-step="1">
+        <div class="qlabel" data-i18n="quote.s1label">¿Qué necesitas?</div>
+        <div class="qhint" data-i18n="quote.s1hint">Selecciona uno o varios servicios.</div>
+        <div class="qopts" data-multi>
+          <button class="qopt" data-val="svc1.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc1.t">Software a la medida</span></button>
+          <button class="qopt" data-val="svc2.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc2.t">Aplicaciones web</span></button>
+          <button class="qopt" data-val="svc3.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc3.t">Apps móviles</span></button>
+          <button class="qopt" data-val="svc4.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc4.t">Inteligencia artificial</span></button>
+          <button class="qopt" data-val="svc5.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc5.t">Cloud & DevOps</span></button>
+          <button class="qopt" data-val="svc6.t"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="svc6.t">Datos & Analítica</span></button>
+        </div>
+        <div class="qnav"><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
+      </div>
+
+      <!-- Step 2: size -->
+      <div class="qstep" data-step="2">
+        <div class="qlabel" data-i18n="quote.s2label">Tamaño del proyecto</div>
+        <div class="qhint" data-i18n="quote.s2hint">Una estimación aproximada.</div>
+        <div class="qopts" data-single>
+          <button class="qopt" data-val="size1"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/></svg></span><span data-i18n="size1">Pequeño · MVP</span></button>
+          <button class="qopt" data-val="size2"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/></svg></span><span data-i18n="size2">Mediano</span></button>
+          <button class="qopt" data-val="size3"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span><span data-i18n="size3">Grande · plataforma</span></button>
+          <button class="qopt" data-val="size4"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg></span><span data-i18n="size4">No estoy seguro</span></button>
+        </div>
+        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
+      </div>
+
+      <!-- Step 3: timeline -->
+      <div class="qstep" data-step="3">
+        <div class="qlabel" data-i18n="quote.s3label">¿Para cuándo?</div>
+        <div class="qhint" data-i18n="quote.s3hint">Selecciona el plazo.</div>
+        <div class="qopts" data-single>
+          <button class="qopt" data-val="time1"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span data-i18n="time1">Lo antes posible</span></button>
+          <button class="qopt" data-val="time2"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span data-i18n="time2">En 1–3 meses</span></button>
+          <button class="qopt" data-val="time3"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span data-i18n="time3">En 3–6 meses</span></button>
+          <button class="qopt" data-val="time4"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span data-i18n="time4">Solo explorando</span></button>
+        </div>
+        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
+      </div>
+
+      <!-- Step 4: contact + summary -->
+      <div class="qstep" data-step="4">
+        <div class="qlabel" data-i18n="quote.s4label">Tus datos</div>
+        <div class="qhint" data-i18n="quote.s4hint">Para enviarte la propuesta.</div>
+        <div class="qfields">
+          <div class="qfield"><label data-i18n="q.name">Nombre</label><input class="qinput" id="qName" type="text" data-ph="q.namePh"></div>
+          <div class="qfield"><label data-i18n="q.company">Empresa</label><input class="qinput" id="qCompany" type="text" data-ph="q.companyPh"></div>
+          <div class="qfield"><label data-i18n="q.email">Correo</label><input class="qinput" id="qEmail" type="email" data-ph="q.emailPh"></div>
+          <div class="qfield"><label data-i18n="q.phone">Teléfono</label><input class="qinput" id="qPhone" type="tel" data-ph="q.phonePh"></div>
+          <div class="qfield"><label data-i18n="q.details">Detalles</label><textarea class="qinput" id="qDetails" data-ph="q.detailsPh"></textarea></div>
+        </div>
+        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" id="qSend"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg><span data-i18n="q.send">Enviar por WhatsApp</span></button></div>
+      </div>
+
+      <!-- Step done -->
+      <div class="qstep" data-step="done">
+        <div class="qdone">
+          <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3 data-i18n="q.doneTitle">¡Listo!</h3>
+          <p data-i18n="q.doneText">Se abrió WhatsApp con tu solicitud.</p>
+          <button class="btn btn-outline-light" id="qReset"><span data-i18n="q.doneAgain">Hacer otra cotización</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Hablemos</span>
+      <h2 data-i18n="contact.title">Cuéntanos sobre tu proyecto</h2>
+      <p data-i18n="contact.lead">Respondemos en menos de 24 horas hábiles.</p>
+      <div class="contact-methods">
+        <a class="contact-method" data-wa-cta href="#">
+          <span class="cm-ic" style="background:rgb(37 211 102/.12);color:#1aa856"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.523 5.26l-.999 3.648 3.965-1.607z"/></svg></span>
+          <span><span class="cm-k" data-i18n="contact.waK">WhatsApp</span><span class="cm-v" id="waDisplay">+00 000 000 0000</span></span>
+        </a>
+        <a class="contact-method" id="emailMethod" href="#">
+          <span class="cm-ic" style="background:hsl(var(--accent)/.12);color:hsl(var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
+          <span><span class="cm-k" data-i18n="contact.emailK">Correo</span><span class="cm-v" id="emailDisplay">contacto@nexora.com</span></span>
+        </a>
+        <a class="contact-method" id="phoneMethod" href="#">
+          <span class="cm-ic" style="background:rgb(var(--c-purple)/.12);color:rgb(var(--c-purple))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.36 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span><span class="cm-k" data-i18n="contact.phoneK">Teléfono</span><span class="cm-v" id="phoneDisplay">+00 000 000 0000</span></span>
+        </a>
+        <div class="contact-method">
+          <span class="cm-ic" style="background:rgb(var(--c-orange)/.12);color:rgb(var(--c-orange))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><span class="cm-k" data-i18n="contact.locK">Ubicación</span><span class="cm-v" id="locDisplay">Ciudad, País</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal d1">
+      <div id="cfForm">
+        <h3 data-i18n="cf.title">Envíanos un mensaje</h3>
+        <p class="sub" data-i18n="cf.sub">Completa el formulario.</p>
+        <form class="cfields" id="contactForm">
+          <div class="cfield-row">
+            <div class="cfield"><label data-i18n="cf.name">Nombre</label><input class="cinput" id="cName" type="text" required></div>
+            <div class="cfield"><label data-i18n="cf.email">Correo</label><input class="cinput" id="cEmail" type="email" required></div>
+          </div>
+          <div class="cfield-row">
+            <div class="cfield"><label data-i18n="cf.company">Empresa</label><input class="cinput" id="cCompany" type="text"></div>
+            <div class="cfield"><label data-i18n="cf.phone">Teléfono</label><input class="cinput" id="cPhone" type="tel"></div>
+          </div>
+          <div class="cfield"><label data-i18n="cf.message">Mensaje</label><textarea class="cinput" id="cMessage" data-ph="cf.messagePh" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%"><span data-i18n="cf.send">Enviar mensaje</span></button>
+          <p class="form-note" data-i18n="cf.note">Al enviar se abrirá WhatsApp.</p>
+        </form>
+      </div>
+      <div class="form-success" id="cfSuccess">
+        <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3 data-i18n="cf.okTitle">¡Mensaje preparado!</h3>
+        <p data-i18n="cf.okText">Abrimos WhatsApp con tu mensaje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="logo">N</span><span>Nexora</span></div>
+        <p class="about" data-i18n="footer.about">Consultoría de software a la medida.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer.nav">Navegación</h4>
+        <ul>
+          <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="#why" data-i18n="nav.why">Por qué Nexora</a></li>
+          <li><a href="#process" data-i18n="nav.process">Proceso</a></li>
+          <li><a href="#industries" data-i18n="nav.industries">Industrias</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.services">Servicios</h4>
+        <ul>
+          <li><a href="#quote" data-i18n="svc1.t">Software a la medida</a></li>
+          <li><a href="#quote" data-i18n="svc2.t">Aplicaciones web</a></li>
+          <li><a href="#quote" data-i18n="svc3.t">Apps móviles</a></li>
+          <li><a href="#quote" data-i18n="svc4.t">Inteligencia artificial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contactH">Contacto</h4>
+        <ul class="fcontact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span id="emailFoot">contacto@nexora.com</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.36 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg><span id="phoneFoot">+00 000 000 0000</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year">2026</span> Nexora. <span data-i18n="footer.rights">Todos los derechos reservados.</span></div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="fab-wa" data-wa-cta href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.523 5.26l-.999 3.648 3.965-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+  <span class="fab-txt" data-i18n="hero.cta2">Hablar por WhatsApp</span>
+</a>
+
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
