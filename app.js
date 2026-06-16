@@ -84,6 +84,7 @@
     lang = lang === "es" ? "en" : "es";
     localStorage.setItem("nexora_lang", lang);
     applyLang();
+    window.dispatchEvent(new CustomEvent("nexora:lang", { detail: lang }));
   }
 
   /* ---------- Header scroll + mobile menu ---------- */

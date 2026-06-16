@@ -30,7 +30,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span id="langLabel">EN</span>
       </button>
-      <a href="#quote" class="btn btn-primary btn-desktop" style="height:44px;padding:0 18px;font-size:15px" data-i18n="nav.quote">Diagnóstico gratis</a>
+      <a href="#assessment" class="btn btn-primary btn-desktop" style="height:44px;padding:0 18px;font-size:15px" data-i18n="nav.quote">Diagnóstico gratis</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menú">
         <svg id="menuIconOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         <svg id="menuIconClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -43,7 +43,7 @@
     <a href="#pricing" data-i18n="nav.pricing">Precios</a>
     <a href="#industries" data-i18n="nav.industries">Industrias</a>
     <a href="#contact" data-i18n="nav.contact">Contacto</a>
-    <a href="#quote" class="btn btn-primary" data-i18n="nav.quote">Diagnóstico gratis</a>
+    <a href="#assessment" class="btn btn-primary" data-i18n="nav.quote">Diagnóstico gratis</a>
   </div>
 </header>
 
@@ -59,7 +59,7 @@
     <h1 class="reveal d1"><span data-i18n="hero.title1">Software a la medida que </span><span class="grad" data-i18n="hero.titleAccent">impulsa tu negocio</span></h1>
     <p class="lead reveal d2" data-i18n="hero.lead">Diseñamos, desarrollamos e integramos soluciones digitales.</p>
     <div class="hero-cta reveal d3">
-      <a href="#quote" class="btn btn-accent btn-lg">
+      <a href="#assessment" class="btn btn-accent btn-lg">
         <span data-i18n="hero.cta1">Pedir cotización</span>
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -208,87 +208,11 @@
   </div>
 </section>
 
-<!-- ================= QUOTE BUILDER ================= -->
-<section class="section quote" id="quote">
+<!-- ================= ASSESSMENT ================= -->
+<section class="section quote" id="assessment">
   <div class="blob blob-1"></div>
   <div class="wrap">
-    <div class="quote-card reveal">
-      <div class="qhead">
-        <h2 data-i18n="quote.title">Arma tu cotización en 1 minuto</h2>
-        <p data-i18n="quote.subtitle">Cuéntanos qué necesitas.</p>
-      </div>
-      <div class="qprogress" id="qprogress">
-        <div class="seg"><div class="fill"></div></div>
-        <div class="seg"><div class="fill"></div></div>
-        <div class="seg"><div class="fill"></div></div>
-        <div class="seg"><div class="fill"></div></div>
-      </div>
-
-      <!-- Step 1: services -->
-      <div class="qstep active" data-step="1">
-        <div class="qlabel" data-i18n="quote.s1label">¿Qué necesitas?</div>
-        <div class="qhint" data-i18n="quote.s1hint">Selecciona uno o varios servicios.</div>
-        <div class="qopts" data-multi>
-          <button class="qopt" data-val="area1"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area1">Reducir costos</span></button>
-          <button class="qopt" data-val="area2"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area2">Aumentar ingresos</span></button>
-          <button class="qopt" data-val="area3"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area3">Mitigar riesgos</span></button>
-          <button class="qopt" data-val="area4"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area4">Automatizar con IA</span></button>
-          <button class="qopt" data-val="area5"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area5">Comparar con la industria</span></button>
-          <button class="qopt" data-val="area6"><span class="qcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="area6">No estoy seguro</span></button>
-        </div>
-        <div class="qnav"><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
-      </div>
-
-      <!-- Step 2: size -->
-      <div class="qstep" data-step="2">
-        <div class="qlabel" data-i18n="quote.s2label">Tamaño del proyecto</div>
-        <div class="qhint" data-i18n="quote.s2hint">Una estimación aproximada.</div>
-        <div class="qopts" data-single>
-          <button class="qopt" data-val="size1"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/></svg></span><span data-i18n="size1">Pequeño · MVP</span></button>
-          <button class="qopt" data-val="size2"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/></svg></span><span data-i18n="size2">Mediano</span></button>
-          <button class="qopt" data-val="size3"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span><span data-i18n="size3">Grande · plataforma</span></button>
-          <button class="qopt" data-val="size4"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg></span><span data-i18n="size4">No estoy seguro</span></button>
-        </div>
-        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
-      </div>
-
-      <!-- Step 3: timeline -->
-      <div class="qstep" data-step="3">
-        <div class="qlabel" data-i18n="quote.s3label">¿Para cuándo?</div>
-        <div class="qhint" data-i18n="quote.s3hint">Selecciona el plazo.</div>
-        <div class="qopts" data-single>
-          <button class="qopt" data-val="time1"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span data-i18n="time1">Lo antes posible</span></button>
-          <button class="qopt" data-val="time2"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span data-i18n="time2">En 1–3 meses</span></button>
-          <button class="qopt" data-val="time3"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span data-i18n="time3">En 3–6 meses</span></button>
-          <button class="qopt" data-val="time4"><span class="qico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span data-i18n="time4">Solo explorando</span></button>
-        </div>
-        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" data-next><span data-i18n="q.next">Continuar</span></button></div>
-      </div>
-
-      <!-- Step 4: contact + summary -->
-      <div class="qstep" data-step="4">
-        <div class="qlabel" data-i18n="quote.s4label">Tus datos</div>
-        <div class="qhint" data-i18n="quote.s4hint">Para enviarte la propuesta.</div>
-        <div class="qfields">
-          <div class="qfield"><label data-i18n="q.name">Nombre</label><input class="qinput" id="qName" type="text" data-ph="q.namePh"></div>
-          <div class="qfield"><label data-i18n="q.company">Empresa</label><input class="qinput" id="qCompany" type="text" data-ph="q.companyPh"></div>
-          <div class="qfield"><label data-i18n="q.email">Correo</label><input class="qinput" id="qEmail" type="email" data-ph="q.emailPh"></div>
-          <div class="qfield"><label data-i18n="q.phone">Teléfono</label><input class="qinput" id="qPhone" type="tel" data-ph="q.phonePh"></div>
-          <div class="qfield"><label data-i18n="q.details">Detalles</label><textarea class="qinput" id="qDetails" data-ph="q.detailsPh"></textarea></div>
-        </div>
-        <div class="qnav"><button class="qback" data-back><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="q.back">Atrás</span></button><span class="spacer"></span><button class="btn btn-wa" id="qSend"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg><span data-i18n="q.send">Enviar por WhatsApp</span></button></div>
-      </div>
-
-      <!-- Step done -->
-      <div class="qstep" data-step="done">
-        <div class="qdone">
-          <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <h3 data-i18n="q.doneTitle">¡Listo!</h3>
-          <p data-i18n="q.doneText">Se abrió WhatsApp con tu solicitud.</p>
-          <button class="btn btn-outline-light" id="qReset"><span data-i18n="q.doneAgain">Hacer otra cotización</span></button>
-        </div>
-      </div>
-    </div>
+    <div class="asmt-card reveal" id="asmtCard"></div>
   </div>
 </section>
 
@@ -371,10 +295,10 @@
       <div>
         <h4 data-i18n="footer.services">Servicios</h4>
         <ul>
-          <li><a href="#quote" data-i18n="svc1.t">Software a la medida</a></li>
-          <li><a href="#quote" data-i18n="svc2.t">Aplicaciones web</a></li>
-          <li><a href="#quote" data-i18n="svc3.t">Apps móviles</a></li>
-          <li><a href="#quote" data-i18n="svc4.t">Inteligencia artificial</a></li>
+          <li><a href="#assessment" data-i18n="svc1.t">Software a la medida</a></li>
+          <li><a href="#assessment" data-i18n="svc2.t">Aplicaciones web</a></li>
+          <li><a href="#assessment" data-i18n="svc3.t">Apps móviles</a></li>
+          <li><a href="#assessment" data-i18n="svc4.t">Inteligencia artificial</a></li>
         </ul>
       </div>
       <div>
@@ -398,5 +322,6 @@
 <script src="config.js"></script>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
+<script src="assessment.js"></script>
 </body>
 </html>
